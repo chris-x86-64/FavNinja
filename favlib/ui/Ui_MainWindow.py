@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'favlib/ui/MainWindow.ui'
 #
-# Created: Thu Sep 12 03:41:32 2013
+# Created: Thu Sep 12 03:59:32 2013
 #      by: PyQt4 UI code generator 4.10
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,6 +29,20 @@ class Ui_MainWindow(object):
         MainWindow.resize(1024, 768)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.tweetButton = QtGui.QPushButton(self.centralwidget)
+        self.tweetButton.setGeometry(QtCore.QRect(930, 680, 87, 27))
+        self.tweetButton.setObjectName(_fromUtf8("tweetButton"))
+        self.tweetToPost = QtGui.QLineEdit(self.centralwidget)
+        self.tweetToPost.setGeometry(QtCore.QRect(10, 680, 861, 27))
+        self.tweetToPost.setMaxLength(1024)
+        self.tweetToPost.setObjectName(_fromUtf8("tweetToPost"))
+        self.charCounter = QtGui.QLCDNumber(self.centralwidget)
+        self.charCounter.setGeometry(QtCore.QRect(883, 680, 41, 23))
+        self.charCounter.setFrameShape(QtGui.QFrame.Panel)
+        self.charCounter.setFrameShadow(QtGui.QFrame.Sunken)
+        self.charCounter.setNumDigits(3)
+        self.charCounter.setSegmentStyle(QtGui.QLCDNumber.Flat)
+        self.charCounter.setObjectName(_fromUtf8("charCounter"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 27))
@@ -49,7 +63,8 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "FavNinja", None))
+        self.tweetButton.setText(_translate("MainWindow", "Tweet!", None))
         self.menuFile.setTitle(_translate("MainWindow", "File", None))
         self.actionQuit.setText(_translate("MainWindow", "Quit", None))
 
